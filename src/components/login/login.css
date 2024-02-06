@@ -1,0 +1,8 @@
+.logincontainer {
+    font: 1em Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border: 2px solid white;
+    padding: 2px;
+    margin-right: 20px;
+    margin-top:-5px;
+    /* width: 430px; */
+}

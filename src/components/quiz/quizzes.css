@@ -1,0 +1,30 @@
+.quizzes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 2rem 0; */
+}
+.quizelement {
+    /* display: flex; */
+    width: 500px;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 10px 10px;
+    padding: 1rem;
+    border: 1px solid #070707;
+    border-radius: 0.3rem;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px 0 #070707;
+
+}
+.codesnippet {
+    background-color: #070707;
+    color: aliceblue;
+    /* padding: 0.5rem; */
+    /* border-radius: 0.3rem; */
+    /* margin: 0.5rem 0; */
+    
+}

@@ -1,0 +1,31 @@
+/* Header.css */
+.header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 10px; */
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  padding: 1.5em;
+  }
+  
+  .nav-menu {
+    display: flex;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px; /* Adjust the spacing between menu items */
+  }
+  
+  .nav-menu a.active {
+    font-weight: bold; /* Style for the active link */
+    color: red
+  }
+  

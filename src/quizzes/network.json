@@ -1,0 +1,85 @@
+{
+  "quizzes": [
+    {
+      "name": "network",
+      "data": [
+        {
+          "question": "What is a socket in Java networking?",
+          "answer": "A socket is an endpoint for communication between two machines over a network in Java."
+        },
+        {
+          "question": "What are the two types of sockets in Java?",
+          "answer": "The two types of sockets in Java are: ServerSocket and Socket."
+        },
+        {
+          "question": "How can you create a TCP server socket in Java?",
+          "answer": "##ServerSocket serverSocket = new ServerSocket(portNumber);"
+        },
+        {
+          "question": "How can you create a TCP client socket in Java?",
+          "answer": "##Socket clientSocket = new Socket(serverAddress, serverPort);"
+        },
+        {
+          "question": "What is a network protocol?",
+          "answer": "A network protocol is a set of rules that governs the communication between computers on a network."
+        },
+        {
+          "question": "What are the most important protocols in networking?",
+          "answer": "The most important protocols in networking are: IP, TCP, HTTP."
+        },
+        {
+          "question": "What are the accronyms of IP, TCP, HTTP?",
+          "answer": "They are: IP - Internet Protocol, TCP - Transmission Control Protocol, HTTP - HyperText Transfer Protocol."
+        },
+        {
+          "question": "What is an IP address?",
+          "answer": "An IP address is a unique identifier for a computer or device on a TCP/IP network."
+        },
+        {
+          "question": "What is a port number?",
+          "answer": "A Port number is a way to identify a specific process to which an Internet or other network message is to be forwarded when it arrives at a server."
+        },
+        {
+          "question": "What is a DNS server?",
+          "answer": "A DNS server is a computer server that contains a database of public IP addresses and their associated hostnames."
+        },
+        {
+          "question": "What is a DHCP server?",
+          "answer": "A DHCP server is a network server that automatically provides and assigns IP addresses, default gateways and other network parameters to client devices."
+        },
+        {
+          "question": "In the EchoServer of our demo code, why can we only make one request from the client to the server?",
+          "answer": "It is because the server is only listening for one request from the client. Once the server receives the request, it sends the response and then closes the connection."
+        },
+        {
+          "question": "What is the purpose of the while loop in the start method of the RequestDataServer?",
+          "answer": "It is to enable the server to listen for multiple requests from the client. Once the server receives a request, it sends the response and then goes back to listening for another request."
+        },
+        {
+          "question": "What is an inputStream?",
+          "answer": "It is a sequence of bytes that you can read from."
+        },
+        {
+          "question": "How can we write to an OutputStream?",
+          "answer": "##new PrintWriter(clientSocket.getOutputStream(), true).println(inputLine);"
+        },
+        {
+          "question": "What is GET and POST in HTTP?",
+          "answer": "HTTP method GET is used to request data from a specified resource. HTTP method POST is used to send data to a server to create/update a resource."
+        },
+        {
+          "question": "What are HTTP headers for?",
+          "answer": "They are for passing additional information with an HTTP request or response, so that the client and server can understand each other better."
+        },
+        {
+          "question": "In RequestFileServer, there is a statement: 'RequestDTO requestDTO = generateRequestObject(in);'. Where does the generateRequestObject method come from? and what does it do?",
+          "answer": "It is inherited from the RequestDataServer class. It is used to create a RequestDTO object from the input stream."
+        },
+        {
+          "question": "When do we need Input- or OutputStreams?",
+          "answer": "When we want to read from or write to a file, a network connection, or any other I/O source."
+        }
+      ]
+    }
+  ]
+}
