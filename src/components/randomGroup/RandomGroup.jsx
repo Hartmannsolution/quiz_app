@@ -111,12 +111,11 @@ const RandomGroup = (props) => {
         </form>
         {/* End of form part */}
       </div>
-      <div className="groupstable">
-          {groups.map((group, idx) => {
+      { groups[0].length > 0 && <div className="groupstable">
+          { groups.map((group, idx) => {
             return (
-              <>
-                <table className="grouptable"><thead>
-                  <tr key={idx}>
+                <table key={idx} className="grouptable"><thead>
+                  <tr>
                     <th>Group {idx + 1}</th>
                   </tr></thead><tbody>
                   {group.map((name, index) => {
@@ -127,10 +126,9 @@ const RandomGroup = (props) => {
                     );
                   })}</tbody>
                 </table>
-              </>
             );
           })}
-      </div>
+      </div>}
     </div>
   );
 };
