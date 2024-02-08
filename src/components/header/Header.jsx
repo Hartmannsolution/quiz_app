@@ -20,6 +20,9 @@ const Header = ({facade, setUserContext}) => {
         <NavLink to="/group" className={({isActive}) => (isActive ? "active" : 'none')}>
         Group generator
         </NavLink>
+        <NavLink to="/break" className={({isActive}) => (isActive ? "active" : 'none')}>
+        Timer
+        </NavLink>
         {/* <LoginContainer facade={facade} setUserContext={setUserContext} /> */}
       </nav>
     </header>

@@ -13,6 +13,7 @@ import {
 // import "./index.css";
 import quizzesObj from "./quizzes/network.json";
 import RandomGroup from "./components/randomGroup/RandomGroup";
+import BreakTimer from "./components/breakTimer/BreakTimer";
 
 
 const router = createBrowserRouter(
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       </Route>
     <Route path="/group" element={<RandomGroup/>} />
     <Route path="/about" element={<About/>} />
+    <Route path="/break" element={<BreakTimer/>} />
     </Route>
     </>
   )
