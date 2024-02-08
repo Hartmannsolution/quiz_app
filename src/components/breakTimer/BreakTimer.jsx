@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./breakTimer.css";
+import "./breaktimer.css";
 
 const BreakTimer = () => {
   const [breakTime, setBreakTime] = useState(60);
