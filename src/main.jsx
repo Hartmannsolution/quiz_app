@@ -38,7 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 function About() {
   return (
   <>
-  <h1>About this site</h1>;
+  <h1>About this site</h1>
   <p>This is site that is used for making classroom quizes for Datamatiker students at Cphbusiness in Lyngby</p>
   </>);
 }

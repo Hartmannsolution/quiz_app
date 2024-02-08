@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import './quizzes.css'
 
 const Quizzes = ({quizzesObj}) => {
@@ -12,6 +12,7 @@ const Quizzes = ({quizzesObj}) => {
 
     })}
     </ol> */}
+    <Link to="network">Computer networks with java</Link>
     <Outlet context={[quizzesObj]}/>
     </>
   )

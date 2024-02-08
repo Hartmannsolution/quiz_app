@@ -9,6 +9,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f2f2f2;
+    min-width: 300px;
 }
 textarea {
     width: 100%;
@@ -30,19 +31,25 @@ input[type=submit] {
     box-sizing: border-box;
 }
 .groupstable {
+    display: flex;
+    flex-flow: wrap row;
     border-collapse: collapse;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
 }
-.groupstable th, .groupstable td {
+.grouptable {
+    border: 1px solid orange;
+}
+.grouptable th, .groupstable td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
+    /* width: 100%; */
 }
-.groupstable td {
+.grouptable td {
     text-align: left;
     background-color: aliceblue;
-    min-width: 200px;
+    min-width: 300px;
 }
