@@ -28,3 +28,8 @@
     /* margin: 0.5rem 0; */
     
 }
+.linkstable, td, th {
+    border: silver 1px solid    ;
+    justify-content: center;
+    margin: 2rem 0;
+}
