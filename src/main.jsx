@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 // import "./index.css";
 import quizzesObj from "./quizzes/network.json";
+import RandomGroup from "./components/randomGroup/RandomGroup";
 
 
 const router = createBrowserRouter(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="quizzes" element={<Quizzes quizzesObj={quizzesObj} errorElement={<ErrorPage />}/>}>
         <Route path=":name" element={<QuizDetails/>} errorElement={<ErrorPage />}/>
       </Route>
+    <Route path="/group" element={<RandomGroup/>} />
     <Route path="/about" element={<About/>} />
     </Route>
     </>
