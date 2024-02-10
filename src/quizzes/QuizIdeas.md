@@ -3,7 +3,8 @@
 - Network
 - Threads
 - Git
-- Linux
+- Linux/shell (cd, ls, pwd, less, touch, mkdir, rm, cp, mv, ssh, scp, rsync, find, grep, alias, export, chmod, apt install, apt list, curl/wget, env, )
+- Vim editor (i, a, esc, h,j,k,l, w, b, e, $, 0, x, dd, yy, p, u, ctrl+r, gg, shift+g, t, f, /, :wq, :q! )
 
 ## Sem 3
 - React (Hooks, Lift State, Controlled/Uncontrolled Components, Context)
@@ -18,7 +19,8 @@
 ## Sem 4 - TypeScript
 - TypeScript
 - React Hooks
-- GraphQL
+- GraphQL backend (Apollo)
+- GraphQL fronend (Apollo Client)
 - MongoDB/Mongoose
 - Express
 

@@ -13,30 +13,15 @@ const Quizzes = ({ quizzesObj }) => {
     </ol> */}
       <table className="linkstable">
         <thead>
-          <tr>
-            <th>Purpose</th>
-            <th>Link</th>
-          </tr>
+          <tr> <th>Semester</th> <th>Link</th> </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Sem 2</td>
-            <td>
-              <Link to="network">Computer networks with java</Link>
-            </td>
-          </tr>
-          <tr>
-            <td>Sem 2</td>
-            <td>
-              <Link to="threads">Threads in java</Link>
-            </td>
-          </tr>
-          <tr>
-            <td>Sem 3</td>
-            <td>
-              <Link to="router">React Router</Link>
-            </td>
-          </tr>
+          <tr> <td>Sem 2</td> <td className="link-table-item"> <Link to="network">Computer networks with java</Link> </td> </tr>
+          <tr> <td>Sem 2</td> <td className="link-table-item"> <Link to="threads">Threads in java</Link> </td> </tr>
+          <tr> <td>Sem 3</td> <td className="link-table-item"> <Link to="reactjs">React JS</Link> </td> </tr>
+          <tr> <td>Sem 3</td> <td className="link-table-item"> <Link to="router">React Router</Link> </td> </tr>
+          <tr> <td>Sem 4</td> <td className="link-table-item"> <Link to="graphql_backend">GraphQL Backend</Link> </td> </tr>
+          <tr> <td>Sem 4</td> <td className="link-table-item"> <Link to="graphql_frontend">GraphQL Client</Link> </td> </tr>
         </tbody>
       </table>
       <Outlet context={[quizzesObj]} />

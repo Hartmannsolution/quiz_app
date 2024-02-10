@@ -41,6 +41,7 @@ input[type=submit] {
 }
 .grouptable {
     border: 1px solid orange;
+    margin-top: 2px;
 }
 .grouptable th, .groupstable td {
     border: 1px solid #ccc;
