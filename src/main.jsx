@@ -11,7 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 // import "./index.css";
-import quizzesObj from "./quizzes/network.json";
+import quizzesObj from "./quizzes/questions.json";
 import RandomGroup from "./components/randomGroup/RandomGroup";
 import BreakTimer from "./components/breakTimer/BreakTimer";
 

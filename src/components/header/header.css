@@ -26,6 +26,6 @@
   
   .nav-menu a.active {
     font-weight: bold; /* Style for the active link */
-    color: red
+    color: rgb(255, 183, 0)
   }
   

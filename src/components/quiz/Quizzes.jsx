@@ -25,6 +25,18 @@ const Quizzes = ({ quizzesObj }) => {
               <Link to="network">Computer networks with java</Link>
             </td>
           </tr>
+          <tr>
+            <td>Sem 2</td>
+            <td>
+              <Link to="threads">Threads in java</Link>
+            </td>
+          </tr>
+          <tr>
+            <td>Sem 3</td>
+            <td>
+              <Link to="router">React Router</Link>
+            </td>
+          </tr>
         </tbody>
       </table>
       <Outlet context={[quizzesObj]} />

@@ -31,5 +31,6 @@
 .linkstable, td, th {
     border: silver 1px solid    ;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 10px ;
+    min-width: 300px;
 }

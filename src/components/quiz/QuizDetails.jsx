@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useOutletContext } from "react-router-dom";
+
 export default () => {
   const { name } = useParams();
   const [quizzesObj] = useOutletContext();
@@ -15,7 +16,7 @@ export default () => {
   return (
       <>
       <h2>{quiz.name}</h2>
-    <div className="quizzes">
+      <div className="quizzes">
       {quiz.data.map((element, index) => {
         return (
           <div className="quizelement">
