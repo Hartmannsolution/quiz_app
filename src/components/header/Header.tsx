@@ -16,14 +16,8 @@ const Header = ({facade, setUserContext}) => {
         <NavLink to="/about" className={({isActive}) => (isActive ? "active" : 'none')}>
         About
         </NavLink> */}
-        <NavLink to="/quizzes" className={({isActive}) => (isActive ? "active" : 'none')}>
-          Quizzes
-        </NavLink>
-        <NavLink to="/group" className={({isActive}) => (isActive ? "active" : 'none')}>
-        Group generator
-        </NavLink>
-        <NavLink to="/break" className={({isActive}) => (isActive ? "active" : 'none')}>
-        Timer
+        <NavLink to="/designpatterns" className={({isActive}) => (isActive ? "active" : 'none')}>
+          Design Patterns
         </NavLink>
         {/* <LoginContainer facade={facade} setUserContext={setUserContext} /> */}
       </nav>
