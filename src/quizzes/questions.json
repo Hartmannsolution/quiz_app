@@ -3,203 +3,516 @@
     {
       "name": "network",
       "data": [
-        { "question": "What is a socket in Java networking?",
-          "answer": "A socket is an endpoint for communication between two machines over a network in Java." },
-        { "question": "What are the two types of sockets in Java?",
-          "answer": "The two types of sockets in Java are: ServerSocket and Socket." },
-        { "question": "How can you create a TCP server socket in Java?",
-          "answer": "##ServerSocket serverSocket = new ServerSocket(portNumber);" },
-        { "question": "How can you create a TCP client socket in Java?",
-          "answer": "##Socket clientSocket = new Socket(serverAddress, serverPort);" },
-        { "question": "What is a network protocol?",
-          "answer": "A network protocol is a set of rules that governs the communication between computers on a network." },
-        { "question": "What are the most important protocols in networking?",
-          "answer": "The most important protocols in networking are: IP, TCP, HTTP." },
-        { "question": "What are the accronyms of IP, TCP, HTTP?",
-          "answer": "They are: IP - Internet Protocol, TCP - Transmission Control Protocol, HTTP - HyperText Transfer Protocol." },
-        { "question": "What is an IP address?",
-          "answer": "An IP address is a unique identifier for a computer or device on a TCP/IP network." },
-        { "question": "What is a port number?",
-          "answer": "A Port number is a way to identify a specific process to which an Internet or other network message is to be forwarded when it arrives at a server." },
-        { "question": "What is a DNS server?",
-          "answer": "A DNS server is a computer server that contains a database of public IP addresses and their associated hostnames." },
-        { "question": "What is a DHCP server?",
-          "answer": "A DHCP server is a network server that automatically provides and assigns IP addresses, default gateways and other network parameters to client devices." },
-        { "question": "In the EchoServer of our demo code, why can we only make one request from the client to the server?",
-          "answer": "It is because the server is only listening for one request from the client. Once the server receives the request, it sends the response and then closes the connection." },
-        { "question": "What is the purpose of the while loop in the start method of the RequestDataServer?",
-          "answer": "It is to enable the server to listen for multiple requests from the client. Once the server receives a request, it sends the response and then goes back to listening for another request." },
-        { "question": "What is an inputStream?",
-          "answer": "It is a sequence of bytes that you can read from." },
-        { "question": "How can we write to an OutputStream?",
-          "answer": "##new PrintWriter(clientSocket.getOutputStream(), true).println(inputLine);" },
-        { "question": "What is GET and POST in HTTP?",
-          "answer": "HTTP method GET is used to request data from a specified resource. HTTP method POST is used to send data to a server to create/update a resource." },
-        { "question": "What are HTTP headers for?",
-          "answer": "They are for passing additional information with an HTTP request or response, so that the client and server can understand each other better." },
-        { "question": "In RequestFileServer, there is a statement: 'RequestDTO requestDTO = generateRequestObject(in);'. Where does the generateRequestObject method come from? and what does it do?",
-          "answer": "It is inherited from the RequestDataServer class. It is used to create a RequestDTO object from the input stream." },
-        { "question": "When do we need Input- or OutputStreams?",
-          "answer": "When we want to read from or write to a file, a network connection, or any other I/O source." }
+        {
+          "question": "What is a socket in Java networking?",
+          "answer": "A socket is an endpoint for communication between two machines over a network in Java."
+        },
+        {
+          "question": "What are the two types of sockets in Java?",
+          "answer": "The two types of sockets in Java are: ServerSocket and Socket."
+        },
+        {
+          "question": "How can you create a TCP server socket in Java?",
+          "answer": "##ServerSocket serverSocket = new ServerSocket(portNumber);"
+        },
+        {
+          "question": "How can you create a TCP client socket in Java?",
+          "answer": "##Socket clientSocket = new Socket(serverAddress, serverPort);"
+        },
+        {
+          "question": "What is a network protocol?",
+          "answer": "A network protocol is a set of rules that governs the communication between computers on a network."
+        },
+        {
+          "question": "What are the most important protocols in networking?",
+          "answer": "The most important protocols in networking are: IP, TCP, HTTP."
+        },
+        {
+          "question": "What are the accronyms of IP, TCP, HTTP?",
+          "answer": "They are: IP - Internet Protocol, TCP - Transmission Control Protocol, HTTP - HyperText Transfer Protocol."
+        },
+        {
+          "question": "What is an IP address?",
+          "answer": "An IP address is a unique identifier for a computer or device on a TCP/IP network."
+        },
+        {
+          "question": "What is a port number?",
+          "answer": "A Port number is a way to identify a specific process to which an Internet or other network message is to be forwarded when it arrives at a server."
+        },
+        {
+          "question": "What is a DNS server?",
+          "answer": "A DNS server is a computer server that contains a database of public IP addresses and their associated hostnames."
+        },
+        {
+          "question": "What is a DHCP server?",
+          "answer": "A DHCP server is a network server that automatically provides and assigns IP addresses, default gateways and other network parameters to client devices."
+        },
+        {
+          "question": "In the EchoServer of our demo code, why can we only make one request from the client to the server?",
+          "answer": "It is because the server is only listening for one request from the client. Once the server receives the request, it sends the response and then closes the connection."
+        },
+        {
+          "question": "What is the purpose of the while loop in the start method of the RequestDataServer?",
+          "answer": "It is to enable the server to listen for multiple requests from the client. Once the server receives a request, it sends the response and then goes back to listening for another request."
+        },
+        {
+          "question": "What is an inputStream?",
+          "answer": "It is a sequence of bytes that you can read from."
+        },
+        {
+          "question": "How can we write to an OutputStream?",
+          "answer": "##new PrintWriter(clientSocket.getOutputStream(), true).println(inputLine);"
+        },
+        {
+          "question": "What is GET and POST in HTTP?",
+          "answer": "HTTP method GET is used to request data from a specified resource. HTTP method POST is used to send data to a server to create/update a resource."
+        },
+        {
+          "question": "What are HTTP headers for?",
+          "answer": "They are for passing additional information with an HTTP request or response, so that the client and server can understand each other better."
+        },
+        {
+          "question": "In RequestFileServer, there is a statement: 'RequestDTO requestDTO = generateRequestObject(in);'. Where does the generateRequestObject method come from? and what does it do?",
+          "answer": "It is inherited from the RequestDataServer class. It is used to create a RequestDTO object from the input stream."
+        },
+        {
+          "question": "When do we need Input- or OutputStreams?",
+          "answer": "When we want to read from or write to a file, a network connection, or any other I/O source."
+        }
       ]
-    }, {
+    },
+    {
       "name": "threads",
       "data": [
-        { "question": "What is a thread?",
-          "answer": "A thread is a lightweight sub-process, the smallest unit of processing. It is a separate path of execution." },
-        { "question": "What is the difference between a process and a thread?",
-          "answer": "A process is a program in execution, whereas a thread is a single path of execution within a process." },
-        { "question": "What is the purpose of the start method in a thread?",
-          "answer": "It is used to start the execution of a thread. The Java Virtual Machine calls the run method of the thread." },
-        { "question": "What is the purpose of the run method in a thread?",
-          "answer": "It is used to perform the task for the thread. It is the entry point for the thread." },
-        { "question": "What is the purpose of the sleep method in a thread?",
-          "answer": "It is used to pause the execution of the thread for a specified amount of time." },
-        { "question": "What is the purpose of the join method in a thread?",
-          "answer": "It is used to wait for a thread to die." },
-        { "question": "What is the purpose of the getName method in a thread?",
-          "answer": "It is used to return the name of the thread." },
-        { "question": "What is a Callable?",
-          "answer": "A Callable is a thread that returns a result and may throw an exception." },
-        { "question": "What is the purpose of the ExecutorService?",
-          "answer": "It is used to manage and control the thread pool." },
-        { "question": "What is the purpose of the submit method in the ExecutorService?",
-          "answer": "It is used to submit a Callable or a Runnable task to the thread pool." },
-        { "question": "What is returned by the submit method in the ExecutorService?",
-          "answer": "It returns a Future object." },
-        { "question": "What is a Future?",
-          "answer": "A Future is a result of an asynchronous computation." },
-        { "question": "What is the purpose of the get method in the Future?",
-          "answer": "It is used to retrieve the result of the asynchronous computation." },
-        { "question": "What is the purpose of the isDone method in the Future?",
-          "answer": "It is used to check if the asynchronous computation is done." },
-        { "question": "What is the purpose of the awaitTermination method in the ExecutorService?",
-          "answer": "It is used to wait for the thread pool to terminate." },
-        { "question": "What is the purpose of the newFixedThreadPool method in the Executors class?",
-          "answer": "It is used to create a fixed-size thread pool." },
-        { "question": "What is the purpose of the newCachedThreadPool method in the Executors class?",
-          "answer": "It is used to create a thread pool that creates new threads as needed, but will reuse previously constructed threads when they are available." },
-        { "question": "Why do we need 2 loops to get the result from the executor service?",
-          "answer": "The first loop is to submit the tasks to the executor service. The second loop is to read the result from the executor service." }
+        {
+          "question": "What is a thread?",
+          "answer": "A thread is a lightweight sub-process, the smallest unit of processing. It is a separate path of execution."
+        },
+        {
+          "question": "What is the difference between a process and a thread?",
+          "answer": "A process is a program in execution, whereas a thread is a single path of execution within a process."
+        },
+        {
+          "question": "What is the purpose of the start method in a thread?",
+          "answer": "It is used to start the execution of a thread. The Java Virtual Machine calls the run method of the thread."
+        },
+        {
+          "question": "What is the purpose of the run method in a thread?",
+          "answer": "It is used to perform the task for the thread. It is the entry point for the thread."
+        },
+        {
+          "question": "What is the purpose of the sleep method in a thread?",
+          "answer": "It is used to pause the execution of the thread for a specified amount of time."
+        },
+        {
+          "question": "What is the purpose of the join method in a thread?",
+          "answer": "It is used to wait for a thread to die."
+        },
+        {
+          "question": "What is the purpose of the getName method in a thread?",
+          "answer": "It is used to return the name of the thread."
+        },
+        {
+          "question": "What is a Callable?",
+          "answer": "A Callable is a thread that returns a result and may throw an exception."
+        },
+        {
+          "question": "What is the purpose of the ExecutorService?",
+          "answer": "It is used to manage and control the thread pool."
+        },
+        {
+          "question": "What is the purpose of the submit method in the ExecutorService?",
+          "answer": "It is used to submit a Callable or a Runnable task to the thread pool."
+        },
+        {
+          "question": "What is returned by the submit method in the ExecutorService?",
+          "answer": "It returns a Future object."
+        },
+        {
+          "question": "What is a Future?",
+          "answer": "A Future is a result of an asynchronous computation."
+        },
+        {
+          "question": "What is the purpose of the get method in the Future?",
+          "answer": "It is used to retrieve the result of the asynchronous computation."
+        },
+        {
+          "question": "What is the purpose of the isDone method in the Future?",
+          "answer": "It is used to check if the asynchronous computation is done."
+        },
+        {
+          "question": "What is the purpose of the awaitTermination method in the ExecutorService?",
+          "answer": "It is used to wait for the thread pool to terminate."
+        },
+        {
+          "question": "What is the purpose of the newFixedThreadPool method in the Executors class?",
+          "answer": "It is used to create a fixed-size thread pool."
+        },
+        {
+          "question": "What is the purpose of the newCachedThreadPool method in the Executors class?",
+          "answer": "It is used to create a thread pool that creates new threads as needed, but will reuse previously constructed threads when they are available."
+        },
+        {
+          "question": "Why do we need 2 loops to get the result from the executor service?",
+          "answer": "The first loop is to submit the tasks to the executor service. The second loop is to read the result from the executor service."
+        }
       ]
-    }, {
+    },
+    {
       "name": "router",
       "data": [
-        { "question": "What is URL",
-          "answer": "The URL in the address bar. A lot of people use the term 'URL' and 'route' interchangeably, but this is not a route in React Router, it's just a URL." },
-        { "question": "What is Location",
-          "answer": "This is a React Router specific object that is based on the built-in browser's window.location object. It represents 'where the user is at'. It's mostly an object representation of the URL but has a bit more to it than that." },
-        { "question": "What is Location State",
-          "answer": "A value that persists with a location that isn't encoded in the URL. Much like hash or search params (data encoded in the URL), but stored invisibly in the browser's memory." },
-        { "question": "What is History Stack",
-          "answer": "As the user navigates, the browser keeps track of each location in a stack. If you click and hold the back button in a browser you can see the browser's history stack right there." },
-        { "question": "What is Client Side Routing (CSR)",
-          "answer": "A plain HTML document can link to other documents and the browser handles the history stack itself. Client Side Routing enables developers to manipulate the browser history stack without making a document request to the server." },
-        { "question": "What is History",
-          "answer": "An object that allows React Router to subscribe to changes in the URL as well as providing APIs to manipulate the browser history stack programmatically." },
-        { "question": "What is History Action",
-          "answer": "One of POP, PUSH, or REPLACE. Users can arrive at a URL for one of these three reasons. A push when a new entry is added to the history stack (typically a link click or the programmer forced a navigation). A replace is similar except it replaces the current entry on the stack instead of pushing a new one. Finally, a pop happens when the user clicks the back or forward buttons in the browser chrome." },
-        { "question": "What is Segment",
-          "answer": "The parts of a URL or path pattern between the / characters. For example, '/users/123' has two segments." },
-        { "question": "What is Path Pattern",
-          "answer": "These look like URLs but can have special characters for matching URLs to routes, like dynamic segments ('/users/:userId') or star segments ('/docs/*'). They aren't URLs, they're patterns that React Router will match." },
-        { "question": "What is Dynamic Segment",
-          "answer": "A segment of a path pattern that is dynamic, meaning it can match any values in the segment. For example the pattern /users/:userId will match URLs like /users/123" },
-        { "question": "What is URL Params",
-          "answer": "The parsed values from the URL that matched a dynamic segment." },
-        { "question": "What is Router",
-          "answer": "Stateful, top-level component that makes all the other components and hooks work." },
-        { "question": "What is Route Config",
-          "answer": "A tree of routes objects that will be ranked and matched (with nesting) against the current location to create a branch of route matches." },
-        { "question": "What is Route",
-          "answer": "An object or Route Element typically with a shape of { path, element } or <Route path element>. The path is a path pattern. When the path pattern matches the current URL, the element will be rendered." },
-        { "question": "What is Route Element",
-          "answer": "Or <Route>. This element's props are read to create a route by <Routes>, but otherwise does nothing." },
-        { "question": "What is Nested Routes",
-          "answer": "Because routes can have children and each route defines a portion of the URL through segments, a single URL can match multiple routes in a nested 'branch' of the tree. This enables automatic layout nesting through outlet, relative links, and more." },
-        { "question": "What is Relative links",
-          "answer": "Links that don't start with / will inherit the closest route in which they are rendered. This makes it easy to link to deeper URLs without having to know and build up the entire path." },
-        { "question": "What is Match",
-          "answer": "An object that holds information when a route matches the URL, like the url params and pathname that matched." },
-        { "question": "What is Matches",
-          "answer": "An array of routes (or branch of the route config) that matches the current location. This structure enables nested routes." },
-        { "question": "What is Parent Route",
-          "answer": "A route with child routes." },
-        { "question": "What is Outlet",
-          "answer": "A component that renders the next match in a set of matches." },
-        { "question": "What is Index Route",
-          "answer": "A child route with no path that renders in the parent's outlet at the parent's URL." },
-        { "question": "What is Layout Route ",
-          "answer": "A parent route without a path, used exclusively for grouping child routes inside a specific layout." }
+        {
+          "question": "What is URL",
+          "answer": "The URL in the address bar. A lot of people use the term 'URL' and 'route' interchangeably, but this is not a route in React Router, it's just a URL."
+        },
+        {
+          "question": "What is Location",
+          "answer": "This is a React Router specific object that is based on the built-in browser's window.location object. It represents 'where the user is at'. It's mostly an object representation of the URL but has a bit more to it than that."
+        },
+        {
+          "question": "What is Location State",
+          "answer": "A value that persists with a location that isn't encoded in the URL. Much like hash or search params (data encoded in the URL), but stored invisibly in the browser's memory."
+        },
+        {
+          "question": "What is History Stack",
+          "answer": "As the user navigates, the browser keeps track of each location in a stack. If you click and hold the back button in a browser you can see the browser's history stack right there."
+        },
+        {
+          "question": "What is Client Side Routing (CSR)",
+          "answer": "A plain HTML document can link to other documents and the browser handles the history stack itself. Client Side Routing enables developers to manipulate the browser history stack without making a document request to the server."
+        },
+        {
+          "question": "What is History",
+          "answer": "An object that allows React Router to subscribe to changes in the URL as well as providing APIs to manipulate the browser history stack programmatically."
+        },
+        {
+          "question": "What is History Action",
+          "answer": "One of POP, PUSH, or REPLACE. Users can arrive at a URL for one of these three reasons. A push when a new entry is added to the history stack (typically a link click or the programmer forced a navigation). A replace is similar except it replaces the current entry on the stack instead of pushing a new one. Finally, a pop happens when the user clicks the back or forward buttons in the browser chrome."
+        },
+        {
+          "question": "What is Segment",
+          "answer": "The parts of a URL or path pattern between the / characters. For example, '/users/123' has two segments."
+        },
+        {
+          "question": "What is Path Pattern",
+          "answer": "These look like URLs but can have special characters for matching URLs to routes, like dynamic segments ('/users/:userId') or star segments ('/docs/*'). They aren't URLs, they're patterns that React Router will match."
+        },
+        {
+          "question": "What is Dynamic Segment",
+          "answer": "A segment of a path pattern that is dynamic, meaning it can match any values in the segment. For example the pattern /users/:userId will match URLs like /users/123"
+        },
+        {
+          "question": "What is URL Params",
+          "answer": "The parsed values from the URL that matched a dynamic segment."
+        },
+        {
+          "question": "What is Router",
+          "answer": "Stateful, top-level component that makes all the other components and hooks work."
+        },
+        {
+          "question": "What is Route Config",
+          "answer": "A tree of routes objects that will be ranked and matched (with nesting) against the current location to create a branch of route matches."
+        },
+        {
+          "question": "What is Route",
+          "answer": "An object or Route Element typically with a shape of { path, element } or <Route path element>. The path is a path pattern. When the path pattern matches the current URL, the element will be rendered."
+        },
+        {
+          "question": "What is Route Element",
+          "answer": "Or <Route>. This element's props are read to create a route by <Routes>, but otherwise does nothing."
+        },
+        {
+          "question": "What is Nested Routes",
+          "answer": "Because routes can have children and each route defines a portion of the URL through segments, a single URL can match multiple routes in a nested 'branch' of the tree. This enables automatic layout nesting through outlet, relative links, and more."
+        },
+        {
+          "question": "What is Relative links",
+          "answer": "Links that don't start with / will inherit the closest route in which they are rendered. This makes it easy to link to deeper URLs without having to know and build up the entire path."
+        },
+        {
+          "question": "What is Match",
+          "answer": "An object that holds information when a route matches the URL, like the url params and pathname that matched."
+        },
+        {
+          "question": "What is Matches",
+          "answer": "An array of routes (or branch of the route config) that matches the current location. This structure enables nested routes."
+        },
+        {
+          "question": "What is Parent Route",
+          "answer": "A route with child routes."
+        },
+        {
+          "question": "What is Outlet",
+          "answer": "A component that renders the next match in a set of matches."
+        },
+        {
+          "question": "What is Index Route",
+          "answer": "A child route with no path that renders in the parent's outlet at the parent's URL."
+        },
+        {
+          "question": "What is Layout Route ",
+          "answer": "A parent route without a path, used exclusively for grouping child routes inside a specific layout."
+        }
       ]
-    }, {
+    },
+    {
       "name": "reactjs",
       "data": [
-        { "question": "What is React?",
-          "answer": "React is a JavaScript library for building user interfaces." },
-        { "question": "What is JSX?",
-          "answer": "JSX is a syntax extension for JavaScript. It is used with React to describe what the UI should look like." },
-        { "question": "What is a component?",
-          "answer": "A component is a reusable piece of code that can be used to build elements for the user interface." },
-        { "question": "What is a state in React?",
-          "answer": "State is a built-in object in React that is used to hold data that can change over time." },
-        { "question": "What is a prop in React?",
-          "answer": "A prop is a way to pass data from a parent component to a child component." },
-        { "question": "What is the purpose of the useState Hook?",
-          "answer": "It is used to add state to a functional component." },
-        { "question": "What is the purpose of the useEffect Hook?",
-          "answer": "It is used to perform side effects in a functional component." },
-        { "question": "What is the purpose of the useContext Hook?",
-          "answer": "It is used to access the context object in a functional component." },
-        { "question": "What is the purpose of the useReducer Hook?",
-          "answer": "It is used to manage state in a functional component." },
-        { "question": "What is the purpose of the useRef Hook?",
-          "answer": "It is used to create a reference to a DOM element in a functional component." },
-        { "question": "What is the concept of 'lifting state up'?",
-          "answer": "It is a technique in React to move the state from a child component to a parent component (and possibly down to other child components)." },
-        { "question": "What is a controlled component?",
-          "answer": "A controlled component is a component that takes its current value through props and notifies changes through callbacks like onChange." },
-        { "question": "What is an uncontrolled component?",
-          "answer": "a component that renders form elements, where the form element's data is handled by the DOM (default DOM behavior). To access the input's DOM node and extract its value you can use a ref." },
-        { "question": "How do we write an uncontrolled component in react",
-          "answer": "##const inputRef = useRef(null); §§return <input type=\"text\" defaultValue=\"bar\" ref={inputRef} />" },
-        { "question": "How do we write a controlled component in react",
-          "answer": "##const [value, setValue] = useState('foo');§§return <input type=\"text\" value={value} onChange={e => setValue(e.target.value)} />" }
+        {
+          "question": "What is React?",
+          "answer": "React is a JavaScript library for building user interfaces."
+        },
+        {
+          "question": "What is JSX?",
+          "answer": "JSX is a syntax extension for JavaScript. It is used with React to describe what the UI should look like."
+        },
+        {
+          "question": "What is a component?",
+          "answer": "A component is a reusable piece of code that can be used to build elements for the user interface."
+        },
+        {
+          "question": "What is a state in React?",
+          "answer": "State is a built-in object in React that is used to hold data that can change over time."
+        },
+        {
+          "question": "What is a prop in React?",
+          "answer": "A prop is a way to pass data from a parent component to a child component."
+        },
+        {
+          "question": "What is the purpose of the useState Hook?",
+          "answer": "It is used to add state to a functional component."
+        },
+        {
+          "question": "What is the purpose of the useEffect Hook?",
+          "answer": "It is used to perform side effects in a functional component."
+        },
+        {
+          "question": "What is the purpose of the useContext Hook?",
+          "answer": "It is used to access the context object in a functional component."
+        },
+        {
+          "question": "What is the purpose of the useReducer Hook?",
+          "answer": "It is used to manage state in a functional component."
+        },
+        {
+          "question": "What is the purpose of the useRef Hook?",
+          "answer": "It is used to create a reference to a DOM element in a functional component."
+        },
+        {
+          "question": "What is the concept of 'lifting state up'?",
+          "answer": "It is a technique in React to move the state from a child component to a parent component (and possibly down to other child components)."
+        },
+        {
+          "question": "What is a controlled component?",
+          "answer": "A controlled component is a component that takes its current value through props and notifies changes through callbacks like onChange."
+        },
+        {
+          "question": "What is an uncontrolled component?",
+          "answer": "a component that renders form elements, where the form element's data is handled by the DOM (default DOM behavior). To access the input's DOM node and extract its value you can use a ref."
+        },
+        {
+          "question": "How do we write an uncontrolled component in react",
+          "answer": "##const inputRef = useRef(null); §§return <input type=\"text\" defaultValue=\"bar\" ref={inputRef} />"
+        },
+        {
+          "question": "How do we write a controlled component in react",
+          "answer": "##const [value, setValue] = useState('foo');§§return <input type=\"text\" value={value} onChange={e => setValue(e.target.value)} />"
+        }
       ]
-    }, {
-      "name":"graphql_backend",
-      "data":[
-        { "question":"What is GraphQL?",
-        "answer":"GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It is a specification for how to communicate with APIs and a server-side runtime for executing queries by using a type system you define for your data. It was developed by Facebook in 2012 and released as an open-source project in 2015."},
-        { "question":"What are the main features of GraphQL?",
-        "answer":"The main features of GraphQL are:§§1. It allows clients to request only the data they need. This reduces the amount of data transferred over the network and improves performance.§§2. It allows clients to request multiple resources in a single request. This reduces the number of requests made to the server and improves performance."},
-        { "question":"List the main concepts of GraphQL",
-        "answer":"schema, query, mutation, subscription, type, field, resolver, directive"},
-        { "question":"What is a schema in GraphQL?",
-        "answer":"A schema is a collection of types that define the data that can be queried and the operations that can be performed on that data."},
-        { "question":"What is a query in GraphQL?",
-        "answer":"A query is a request for data from the server. It is used to read data from the server."},
-        { "question":"What is a mutation in GraphQL?",
-        "answer":"A mutation is a request to change data on the server. It is used to create, update, or delete data."},
-        { "question":"What is a subscription in GraphQL?",
-        "answer":"A subscription is a request to receive real-time updates from the server. It is used to listen for changes to data."},
-        { "question":"What is a type in GraphQL?",
-        "answer":"A type is a category of data, such as a user, a post, or a comment. It defines the shape of the data and the operations that can be performed on that data."},
-        { "question":"What is a field in GraphQL?",
-        "answer":"A field is a property of a type. It defines the data that can be queried and the operations that can be performed on that data."},
-        { "question":"What is a resolver in GraphQL?",
-        "answer":"A resolver is a function that is responsible for fetching the data for a field. It is used to define how the data is retrieved from the server."},
-        { "question":"What is a directive in GraphQL?",
-        "answer":"A directive is used to modify the behavior of a field or an operation. It is used to add metadata to the schema."},
-        { "question":"What is the purpose of the schema in GraphQL?",
-        "answer":"The schema is used to define the types and operations that can be performed on the data. It is used to describe the shape of the data and the operations that can be performed on that data."},
-        { "question":"Query and Mutation functions has 4 parameters. What are they?",
-        "answer":"The 4 parameters are:§1. parent: The result of the previous resolver in the chain.§2. args: The arguments passed to the field.§3. context: A shared object that is passed to all resolvers.§4. info: Information about the execution state of the query."},
-        { "question":"What is the purpose of the parent parameter in a resolver function?",
-        "answer": " The parent parameter is used to access the result of the previous resolver in the chain. It is used to access the data that was returned by the previous resolver."},
-        { "question":"What is the purpose of the args parameter in a resolver function?",
-        "answer":"The args parameter is used to access the arguments passed to the field. It is used to access the data that was passed to the field."}
+    },
+    {
+      "name": "graphql_backend",
+      "data": [
+        {
+          "question": "What is GraphQL?",
+          "answer": "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It is a specification for how to communicate with APIs and a server-side runtime for executing queries by using a type system you define for your data. It was developed by Facebook in 2012 and released as an open-source project in 2015."
+        },
+        {
+          "question": "What are the main features of GraphQL?",
+          "answer": "The main features of GraphQL are:§§1. It allows clients to request only the data they need. This reduces the amount of data transferred over the network and improves performance.§§2. It allows clients to request multiple resources in a single request. This reduces the number of requests made to the server and improves performance."
+        },
+        {
+          "question": "List the main concepts of GraphQL",
+          "answer": "schema, query, mutation, subscription, type, field, resolver, directive"
+        },
+        {
+          "question": "What is a schema in GraphQL?",
+          "answer": "A schema is a collection of types that define the data that can be queried and the operations that can be performed on that data."
+        },
+        {
+          "question": "What is a query in GraphQL?",
+          "answer": "A query is a request for data from the server. It is used to read data from the server."
+        },
+        {
+          "question": "What is a mutation in GraphQL?",
+          "answer": "A mutation is a request to change data on the server. It is used to create, update, or delete data."
+        },
+        {
+          "question": "What is a subscription in GraphQL?",
+          "answer": "A subscription is a request to receive real-time updates from the server. It is used to listen for changes to data."
+        },
+        {
+          "question": "What is a type in GraphQL?",
+          "answer": "A type is a category of data, such as a user, a post, or a comment. It defines the shape of the data and the operations that can be performed on that data."
+        },
+        {
+          "question": "What is a field in GraphQL?",
+          "answer": "A field is a property of a type. It defines the data that can be queried and the operations that can be performed on that data."
+        },
+        {
+          "question": "What is a resolver in GraphQL?",
+          "answer": "A resolver is a function that is responsible for fetching the data for a field. It is used to define how the data is retrieved from the server."
+        },
+        {
+          "question": "What is a directive in GraphQL?",
+          "answer": "A directive is used to modify the behavior of a field or an operation. It is used to add metadata to the schema."
+        },
+        {
+          "question": "What is the purpose of the schema in GraphQL?",
+          "answer": "The schema is used to define the types and operations that can be performed on the data. It is used to describe the shape of the data and the operations that can be performed on that data."
+        },
+        {
+          "question": "Query and Mutation functions has 4 parameters. What are they?",
+          "answer": "The 4 parameters are:§1. parent: The result of the previous resolver in the chain.§2. args: The arguments passed to the field.§3. context: A shared object that is passed to all resolvers.§4. info: Information about the execution state of the query."
+        },
+        {
+          "question": "What is the purpose of the parent parameter in a resolver function?",
+          "answer": " The parent parameter is used to access the result of the previous resolver in the chain. It is used to access the data that was returned by the previous resolver."
+        },
+        {
+          "question": "What is the purpose of the args parameter in a resolver function?",
+          "answer": "The args parameter is used to access the arguments passed to the field. It is used to access the data that was passed to the field."
+        },
+        {
+          "name": "TrailerLicense",
+          "data": [
+            {
+              "question": "Sp1: Hvornår skal man have B/E kørekort, når man kører med trailer?",
+              "answer": "Når bilens og trailerens totalvægt overstiger 3500 kg. Dog ikke hvis trailerens tilladte totalvægt er max 750 kg."
+            },
+            {
+              "question": "Sp2: Hvad er den maksimale tilladte totalvægt for med et B/E kørekort?",
+              "answer": "(3500kg + 3500kg) = 7.000 kg."
+            },
+            {
+              "question": "Sp3: Hvad er kravene for at sætte en synsfri trailer på en bil?",
+              "answer": "Både skal være synet og godkendt til synsfri sammenkobling."
+            },
+            {
+              "question": "Sp4: Hvad med registreringsattesten?",
+              "answer": "Der skal stå synsfri sammenkobling på både bil og trailers registreringsattester."
+            },
+            {
+              "question": "Sp5: Hvad må bilen trække?",
+              "answer": "I bilens registreringsattest, skal der stå hvor meget bilen maximalt må trække. Traileren må ikke overstige denne vægt"
+            },
+            {
+              "question": "Sp6: Hvor lang må bilen og traileren maximalt være?",
+              "answer": "Bil og trailer må tilsammen ikke overstige 18,75 meter."
+            },
+            {
+              "question": "Sp7: Hvad er max afstand mellem bil og trailer?",
+              "answer": "2 meter."
+            },
+            {
+              "question": "Sp8: Hvad er max bredde på en trailer?",
+              "answer": "2,55 meter i alt dog max 35 cm ekstra på hver side i forhold til bilens bredde."
+            },
+            {
+              "question": "Sp9: Hvad er vigtigt når man kører med 'Fuldt rat udslag'?",
+              "answer": "Bilen og traileren må ikke kunne ramme hinanden ved fuldt rat udslag."
+            },
+            {
+              "question": "Sp10: Hvad skal diameteren af koblingskuglen være? (er en del af synsfri standarden).",
+              "answer": "50mm"
+            },
+            {
+              "question": "Sp11: Hvad hvis køretøjerne er synet sammen?",
+              "answer": "Så er det ikke synsfri sammenkobling, men istredet enten fast eller variabel sammenkobling."
+            },
+            {
+              "question": "Sp12: Hvad er max dimensioner for det enkelte køretøj?",
+              "answer": "Længde: 12 meter, bredde: 2,55 meter, højde: 4 meter."
+            },
+            {
+              "question": "Sp13: Hvad skal medbringes når man kører med trailer?",
+              "answer": "Begge køretøjers registreringsattester (I udlandet skal det være originalerne)"
+            },
+            {
+              "question": "Sp14: Hvad skal tjekkes på bilen ved tilkoblingskontrollen?",
+              "answer": "1. Kuglen skal være kuglerund, 2. kugle og arm uden tæring, 3. arm uden skader, ikke bøjet samt solidt fastgjort"
+            },
+            {
+              "question": "Sp15: Hvad skal tjekkes på traileren ved tilkoblingskontrollen?",
+              "answer": "1. Skålen uden skader/revner, 2. Trækstang skal være lige, uden tæring og 3. Solidt fastgjort"
+            },
+            {
+              "question": "Sp16: Hvad skal tjekkes efter sammenkoblingen?",
+              "answer": "Der må ikke være væsentligt slør (Løft traileren med drejehåndtaget og se om der er slør i kuglen)"
+            },
+            {
+              "question": "Sp17: Hvornår skal traileren have bremser?",
+              "answer": "Trailer mellem 750 kg - 3500 kg skal have bremser, både driftsbremse (påløbsbremse) og standsbremse (håndbremse)"
+            },
+            {
+              "question": "Sp18: Hvad gælder for driftsbremsen?",
+              "answer": "1. Skal virke ved alle normale opbremsninger, 2. Skal virke på alle hjul og ved alle hastigheder og belastningsforhold, 3. Skal være udstyret med springwire, der aktiverer trailerens driftsbremse, ved brud på tilkoblingen"
+            },
+            {
+              "question": "Sp19: Hvilke hældninger skal parkeringsbremsen kunne holde på?",
+              "answer": "Trailerens parkeringsbremse, skal kunne holde på 18% hældning, bilens parkeringsbremse skal kunne holde vogntoget på 12% hældning"
+            },
+            {
+              "question": "Sp20: Hvad skal trekkes inden start omkring bremser?",
+              "answer": "1. Parkeringsbremse, skal kunne blive stående trukket, 2. Påløbsbremsens dele skal være hele og uden brud eller bøjninger"
+            },
+            {
+              "question": "Sp21: Hvordan laver man bremseprøve?",
+              "answer": "1. Kør med lav hastighed (10-20 km/t) og brems normalt, 2. Træk bilens p-bremse, 3. Tjek at der fortsat er afstand (tommelfingerbredde) ved påløbsdelen (klem på gummimanchetten)"
+            },
+            {
+              "question": "Sp22: Hvordan tjekker man trailerens p-bremse?",
+              "answer": "Når p-bremse på trailer er trukket bør det være umuligt (eller meget vanskeligt) at trække traileren"
+            },
+            {
+              "question": "Sp23: Hvad skal tjekkes omkring lygter foran på traileren?",
+              "answer": "1. Altid 2 hvide reflekser foran, 2. Hvis traileren overstiger 1,6m i bredden, skal der være 2 hvide positionslygter (synlige på min. 300m afstand), 3. Hvis traileren er over 2,1m i bredden (tilladt fra 1,8m), skal der være 2 hvide positionslygter (placeret så højt som muligt)"
+            },
+            {
+              "question": "Sp24: Hvad skal tjekkes på siden af traileren?",
+              "answer": "1. Der skal være et passende antal gule reflekser (afhænger af trailerens længde), 2. Hvis traileren er over 6 meter, skal der være et passende antal sidemarkeringslygter"
+            },
+            {
+              "question": "Sp25: Hvad skal tjekkes på bagsiden af traileren?",
+              "answer": "1. Der skal være 2 røde lygter (ses på 300m), 2. Der skal være 2 røde stoplygter (væsentligt kraftigere), 3. Blinklys i hver side (ses i sollys), 4. Trekantantede røde reflekser med spidsen opad (2 stk), 5. Hvis trailerbredden overstiger 2,1m (tilladt fra 1,8m), skal være 2 røde markeringslygter, 6. Mindst 1 nummerpladelygte"
+            },
+            {
+              "question": "Sp26: Hvad skal tjekkes omkring dækkene?",
+              "answer": "1. Samme type dæk og størrelse på hver akse, 2. Ikke skader, buler eller skævt slidt, 3. Mønsterdybde på min. 1,6mm, 4. Dæktryk skal være korrekt, 5, Dækkenes bæreevne skal mindst være trailerens tilladte totalvægt (står på siden af dækket)"
+            },
+            {
+              "question": "Sp27: Yderligere tjek af dækkene?",
+              "answer": "1. Dæk og fælg passer til hinanden, 2. Slid (på midten = for højt tryk, i siderne og/eller dæk bliver varmt = for lavt tryk, slidt på en side = skævhed i bærende dele)"
+            },
+            {
+              "question": "Sp28: Tjek af fælgene?",
+              "answer": "1. Solidt fastgjort, 2. Ingen skader, 3. Ingen tæring, 4. Ingen skævheder"
+            },
+            {
+              "question": "Sp29: Hvad gælder omkring hjulophængene?",
+              "answer": "Skal være intakte og uden væsentligt slør (tjekkes hos mekanikeren"
+            },
+            {
+              "question": "Sp30: Hvad gælder for trailerhjulenes affjedring?",
+              "answer": "1. skal være på alle hjul, 2. Traileren skal kunne trykkes lidt ned (i hvert hjørne) og må ikke 'stå og gynge', når trykket slippes igen"
+            },
+            {
+              "question": "Sp 31: Hvad skal tjekkes omkring karosseriet?",
+              "answer": "1. Det må ikke have skarpe kanter, 2. Bærende dele skal være a: hele, b: uden brud, c: uden tæring, d: uden skævheder, e: solidt fastgjort til hinanden, f: ikke noget der hænger ned på kørebanene"
+            }
+          ]
+        }
       ]
-   }
+    }
   ]
 }
