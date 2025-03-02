@@ -22,6 +22,7 @@ const Quizzes = ({ quizzesObj }) => {
           <tr> <td>Sem 3</td> <td className="link-table-item"> <Link to="router">React Router</Link> </td> </tr>
           <tr> <td>Sem 4</td> <td className="link-table-item"> <Link to="graphql_backend">GraphQL Backend</Link> </td> </tr>
           <tr> <td>Sem 4</td> <td className="link-table-item"> <Link to="graphql_frontend">GraphQL Client</Link> </td> </tr>
+          <tr> <td>Privat</td> <td className="link-table-item"> <Link to="trailer_license">Trailer License</Link> </td> </tr>
         </tbody>
       </table>
       <Outlet context={[quizzesObj]} />

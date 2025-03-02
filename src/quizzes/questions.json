@@ -384,7 +384,7 @@
           "answer": "The args parameter is used to access the arguments passed to the field. It is used to access the data that was passed to the field."
         },
         {
-          "name": "TrailerLicense",
+          "name": "trailer_license",
           "data": [
             {
               "question": "Sp1: Hvornår skal man have B/E kørekort, når man kører med trailer?",

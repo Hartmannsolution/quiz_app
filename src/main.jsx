@@ -21,7 +21,7 @@ const router = createBrowserRouter(
     <>
     <Route path="/" element={<App />} >
       <Route path="quizzes" element={<Quizzes quizzesObj={quizzesObj} errorElement={<ErrorPage />}/>}>
-        <Route path=":name" element={<QuizDetails/>} errorElement={<ErrorPage />}/>
+        <Route path=":name" element={<QuizDetails/>} errorElement={<ErrorPage />} test="test"/>
       </Route>
     <Route path="/group" element={<RandomGroup/>} />
     <Route path="/about" element={<About/>} />
